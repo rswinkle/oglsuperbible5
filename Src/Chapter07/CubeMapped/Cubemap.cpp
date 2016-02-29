@@ -89,7 +89,7 @@ void SetupRC()
     gltMakeSphere(sphereBatch, 1.0f, 52, 26);
     gltMakeCube(cubeBatch, 20.0f);
     
-    reflectionShader = gltLoadShaderPairWithAttributes("Reflection.vp", "Reflection.fp", 2, 
+    reflectionShader = gltLoadShaderPairWithAttributes("reflection.vp", "reflection.fp", 2, 
                                                 GLT_ATTRIBUTE_VERTEX, "vVertex",
                                                 GLT_ATTRIBUTE_NORMAL, "vNormal");
                                                 
@@ -99,7 +99,7 @@ void SetupRC()
 	locInvertedCamera = glGetUniformLocation(reflectionShader, "mInverseCamera");
                                                 
                                                 
-    skyBoxShader = gltLoadShaderPairWithAttributes("SkyBox.vp", "SkyBox.fp", 2, 
+    skyBoxShader = gltLoadShaderPairWithAttributes("skybox.vp", "skybox.fp", 2, 
                                                 GLT_ATTRIBUTE_VERTEX, "vVertex",
                                                 GLT_ATTRIBUTE_NORMAL, "vNormal");
 

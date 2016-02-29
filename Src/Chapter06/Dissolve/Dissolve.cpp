@@ -91,7 +91,7 @@ void SetupRC(void)
     // Make the torus
     gltMakeTorus(torusBatch, .80f, 0.25f, 52, 26);
 
-	ADSDissloveShader = gltLoadShaderPairWithAttributes("Dissolve.vp", "Dissolve.fp", 3, GLT_ATTRIBUTE_VERTEX, "vVertex",
+	ADSDissloveShader = gltLoadShaderPairWithAttributes("dissolve.vp", "dissolve.fp", 3, GLT_ATTRIBUTE_VERTEX, "vVertex",
 			GLT_ATTRIBUTE_NORMAL, "vNormal", GLT_ATTRIBUTE_TEXTURE0, "vTexCoords0");
 
 	locAmbient = glGetUniformLocation(ADSDissloveShader, "ambientColor");
@@ -106,7 +106,7 @@ void SetupRC(void)
 
 	glGenTextures(1, &cloudTexture);
 	glBindTexture(GL_TEXTURE_2D, cloudTexture);
-	LoadTGATexture("Clouds.tga", GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR, GL_CLAMP_TO_EDGE);
+	LoadTGATexture("clouds.tga", GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR, GL_CLAMP_TO_EDGE);
 	}
 
 // Cleanup

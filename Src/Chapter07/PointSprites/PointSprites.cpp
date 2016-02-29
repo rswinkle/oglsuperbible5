@@ -116,7 +116,7 @@ void SetupRC(void)
     starsBatch.End();
 
 
-    starFieldShader = gltLoadShaderPairWithAttributes("SpaceFlight.vp", "SpaceFlight.fp", 2, GLT_ATTRIBUTE_VERTEX, "vVertex",
+    starFieldShader = gltLoadShaderPairWithAttributes("spaceflight.vp", "spaceflight.fp", 2, GLT_ATTRIBUTE_VERTEX, "vVertex",
 			GLT_ATTRIBUTE_COLOR, "vColor");
 
 	locMVP = glGetUniformLocation(starFieldShader, "mvpMatrix");
@@ -125,7 +125,7 @@ void SetupRC(void)
     
 	glGenTextures(1, &starTexture);
 	glBindTexture(GL_TEXTURE_2D, starTexture);
-	LoadTGATexture("Star.tga", GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR, GL_CLAMP_TO_EDGE);
+	LoadTGATexture("star.tga", GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR, GL_CLAMP_TO_EDGE);
     }
 
 // Cleanup

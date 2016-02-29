@@ -1,6 +1,6 @@
 #include "sbm.h"
 
-#include <gltools.h>
+#include <GLTools.h>
 
 #include <stdio.h>
 

@@ -188,7 +188,7 @@ void SetupRC()
 #ifdef __APPLE__
 	LoadBMPTexture("NinjaComp.bmp", GL_LINEAR, GL_LINEAR, GL_CLAMP);
 #else
-	LoadBMPTexture("../../../Src/Models/Ninja/NinjaComp.bmp", GL_LINEAR, GL_LINEAR, GL_CLAMP);
+	LoadBMPTexture("../../../Src/Models/Ninja/ninjacomp.bmp", GL_LINEAR, GL_LINEAR, GL_CLAMP);
 #endif
 
 	glGenFramebuffers(1,&fboName);
@@ -233,7 +233,7 @@ void SetupRC()
 	float* fileData = 0;
 
 	// Load first texBO with a tangent-like curve, 1024 values
-	fileData = LoadFloatData("LumTan.data", &count);
+	fileData = LoadFloatData("lumtan.data", &count);
 	if (count > 0)
 	{
 		glBindBuffer(GL_TEXTURE_BUFFER_ARB, texBO[0]);
@@ -242,7 +242,7 @@ void SetupRC()
 	}
 
 	// Load second texBO with a sine-like curve, 1024 values
-	fileData = LoadFloatData("LumSin.data", &count);
+	fileData = LoadFloatData("lumsin.data", &count);
 	if (count > 0)
 	{
 		glBindBuffer(GL_TEXTURE_BUFFER_ARB, texBO[1]);
@@ -251,7 +251,7 @@ void SetupRC()
 	}
 
 	// Load third texBO with a linear curve, 1024 values
-	fileData = LoadFloatData("LumLinear.data", &count);
+	fileData = LoadFloatData("lumlinear.data", &count);
 	if (count > 0)
 	{
 		glBindBuffer(GL_TEXTURE_BUFFER_ARB, texBO[2]);

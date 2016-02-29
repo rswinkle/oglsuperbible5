@@ -1,8 +1,9 @@
-//#version 150 
 // hdr_bloom.vs
 // outputs MVP transformed position 
 // passes texture coordinates through
 // color is * by normal and passed on.
+#version 130
+
 
 in vec3 vVertex;
 in vec3 vNormal;
